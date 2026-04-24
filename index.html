@@ -9,7 +9,6 @@
             --rosa: #ff00ff;
             --blanco: #ffffff;
             --negro: #000000;
-            --gris-oscuro: #0a0a0a;
         }
 
         body {
@@ -19,10 +18,9 @@
             margin: 0;
             padding: 0;
             scroll-behavior: smooth;
-            -webkit-font-smoothing: antialiased;
         }
 
-        /* BARRA DE NAVEGACIÓN PROFESIONAL */
+        /* BARRA DE NAVEGACIÓN */
         nav {
             background: rgba(0, 0, 0, 0.95);
             padding: 20px 5%;
@@ -36,26 +34,11 @@
             align-items: center;
         }
 
-        .logo { 
-            font-size: 1.5rem; 
-            font-weight: bold; 
-            letter-spacing: 3px; 
-            text-transform: uppercase; 
-            text-shadow: 0 0 10px var(--rosa);
-        }
+        .logo { font-size: 1.5rem; font-weight: bold; letter-spacing: 3px; text-transform: uppercase; }
         .logo span { color: var(--rosa); }
-        
-        nav div a { 
-            color: var(--blanco); 
-            text-decoration: none; 
-            margin-left: 25px; 
-            font-size: 0.8rem; 
-            text-transform: uppercase; 
-            letter-spacing: 1px;
-            font-weight: 300;
-        }
+        nav div a { color: var(--blanco); text-decoration: none; margin-left: 25px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
 
-        /* SECCIÓN HERO - TU IMAGEN DEL RAYO */
+        /* PORTADA - TU IMAGEN DEL RAYO */
         .hero-section {
             margin-top: 80px;
             width: 100%;
@@ -63,7 +46,6 @@
             display: flex;
             justify-content: center;
             border-bottom: 5px solid var(--rosa);
-            overflow: hidden;
         }
 
         .hero-section img {
@@ -71,68 +53,34 @@
             max-width: 1200px;
             height: auto;
             display: block;
-            margin: 0 auto;
             box-shadow: 0 0 50px rgba(255, 0, 255, 0.3);
         }
 
-        /* SECCIÓN PAQUETE PREMIUM - DÍA ÚNICO */
-        section { 
-            padding: 100px 10%; 
-            text-align: center; 
-        }
+        /* SECCIÓN PAQUETE PREMIUM */
+        section { padding: 100px 10%; text-align: center; }
         
         .premium-container {
             border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 60px 30px;
             max-width: 650px;
             margin: 0 auto;
-            background: radial-gradient(circle, #111 0%, #000 100%);
+            background: #050505;
             border-radius: 25px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
         }
 
-        h2 { 
-            font-size: 2.2rem; 
-            font-weight: 200; 
-            letter-spacing: 6px; 
-            text-transform: uppercase; 
-            margin-bottom: 10px; 
-        }
+        h2 { font-size: 2.2rem; font-weight: 200; letter-spacing: 6px; text-transform: uppercase; }
+        .evento-fecha { color: var(--rosa); font-size: 1.2rem; letter-spacing: 4px; margin-bottom: 40px; font-weight: bold; }
 
-        .evento-fecha { 
-            color: var(--rosa); 
-            font-size: 1.2rem; 
-            letter-spacing: 4px; 
-            margin-bottom: 40px; 
-            text-transform: uppercase; 
-            font-weight: bold;
-        }
-
-        /* PRECIO EN BLANCO GRANDE */
+        /* PRECIO GRANDE */
         .precio-display {
             font-size: 6rem;
             font-weight: 900;
             color: var(--blanco);
             margin: 30px 0;
-            line-height: 1;
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
         }
-        .precio-display span { 
-            font-size: 2rem; 
-            vertical-align: top; 
-            color: var(--rosa);
-            margin-right: 5px;
-        }
+        .precio-display span { font-size: 2rem; vertical-align: top; color: var(--rosa); }
 
-        .per-person {
-            font-size: 0.9rem;
-            color: #666;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 40px;
-        }
-
-        /* BOTÓN DE RESERVA AL PAGO.HTML */
+        /* BOTONES */
         .btn-reserva {
             background: var(--rosa);
             color: var(--negro);
@@ -144,104 +92,72 @@
             font-size: 1.1rem;
             text-transform: uppercase;
             transition: 0.4s;
-            letter-spacing: 1px;
         }
 
-        .btn-reserva:hover { 
-            background: var(--blanco); 
-            box-shadow: 0 0 30px var(--blanco); 
-            transform: scale(1.05);
-        }
-
-        /* UBICACIÓN Y CONTACTO */
-        #ubicacion { 
-            background: #050505; 
-            border-top: 1px solid #1a1a1a; 
-            padding-bottom: 100px;
-        }
-
-        .contact-details { 
-            font-size: 1rem; 
-            margin-bottom: 50px; 
-            line-height: 2.5; 
+        .btn-mapa {
+            background: transparent;
             color: var(--blanco);
-            font-weight: 300;
+            border: 1px solid var(--blanco);
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 30px;
+            font-size: 0.8rem;
+            transition: 0.3s;
         }
-        .contact-details b { color: var(--rosa); font-weight: bold; }
-        
-        .map-frame {
-            width: 100%;
-            max-width: 950px;
-            margin: 0 auto;
-            border: 2px solid #222;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
-        }
+        .btn-mapa:hover { background: var(--blanco); color: var(--negro); }
 
-        footer { 
-            padding: 50px; 
-            color: #444; 
-            font-size: 0.75rem; 
-            text-transform: uppercase; 
-            letter-spacing: 2px;
-            border-top: 1px solid #111;
-        }
+        /* CONTACTO */
+        #ubicacion { background: #050505; border-top: 1px solid #1a1a1a; padding-bottom: 80px; }
+        .contact-details { font-size: 1rem; margin-bottom: 30px; line-height: 2.5; color: var(--blanco); font-weight: 300; }
+        .contact-details b { color: var(--rosa); }
+
+        footer { padding: 50px; color: #333; font-size: 0.75rem; text-transform: uppercase; border-top: 1px solid #111; }
     </style>
 </head>
 <body>
 
     <nav>
         <div class="logo">TEAM-N-<span>FIT</span></div>
-        <div>
-            <a href="#inicio">Inicio</a>
-            <a href="#ubicacion">Ubicación</a>
-        </div>
+        <div><a href="#inicio">Inicio</a><a href="#ubicacion">Ubicación</a></div>
     </nav>
 
-    <!-- PORTADA CON TU IMAGEN -->
     <div class="hero-section" id="inicio">
         <img src="portada.jpg.png" alt="Team-N-Fit Portada Oficial">
     </div>
 
-    <!-- SECCIÓN PREMIUM DÍA ÚNICO -->
+    <!-- SECCIÓN PREMIUM -->
     <section>
         <div class="premium-container">
             <h2>PAQUETE PREMIUM</h2>
             <div class="evento-fecha">Sábado 20 de Junio</div>
-            
-            <p style="font-weight: 200; letter-spacing: 1px; opacity: 0.7;">Paquete único: Vive la mejor experiencia de Zumba en Kennewick</p>
-            
             <div class="precio-display"><span>$</span>39.99</div>
-            <div class="per-person">Acceso Total / Por Persona</div>
-
-            <!-- Conexión a tu página de pago -->
             <a href="pago.html" class="btn-reserva">RESERVAR MI LUGAR</a>
         </div>
     </section>
 
-    <!-- UBICACIÓN Y MAPA CON ENLACE CORREGIDO -->
+    <!-- UBICACIÓN CORREGIDA SIN MAPA QUE DA ERROR -->
     <section id="ubicacion">
-        <h2 style="margin-bottom: 20px;">NUESTRA <span>SEDE</span></h2>
+        <h2 style="margin-bottom: 20px; color: var(--rosa);">NUESTRA SEDE</h2>
         <div class="contact-details">
             <p>📍 1020 S Olympia Pl, Kennewick, WA 99337</p>
             <p>📞 <b>WhatsApp:</b> 509-845-4218 / 509-845-4230</p>
             <p>📧 <b>Email:</b> MyTeamNfit@gmail.com</p>
-        </div>
-
-        <div class="map-frame">
-            <!-- Este enlace de mapa NO fallará en GitHub -->
-            <iframe 
-                src="https://google.com" 
-                width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen>
-            </iframe>
+            
+            <!-- BOTÓN QUE ABRE GOOGLE MAPS REAL -->
+            <a href="https://google.com" target="_blank" class="btn-mapa">
+                VER RUTA EN GOOGLE MAPS 🗺️
+            </a>
         </div>
     </section>
 
-    <footer>
+    <footer style="text-align: center;">
         &copy; 2024 TEAM-N-FIT | Kennewick, Washington.
     </footer>
 
 </body>
 </html>
+
 
