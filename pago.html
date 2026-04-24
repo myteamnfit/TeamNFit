@@ -9,6 +9,8 @@
             --rosa: #ff00ff;
             --blanco: #ffffff;
             --negro: #000000;
+            --zelle-color: #6d1ed4;
+            --paypal-color: #0070ba;
         }
 
         body {
@@ -42,72 +44,33 @@
             border-radius: 20px;
             background: #0a0a0a;
             border: 1px solid #1a1a1a;
-            position: relative;
         }
 
-        /* Estilo para los LOGOS */
-        .logo-pago {
-            height: 30px;
-            margin-bottom: 15px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* CUADRO PAYPAL VISTOSO */
-        .paypal-box {
-            border: 1px solid #0070ba;
-            padding: 20px;
-            border-radius: 12px;
-            background: rgba(0, 112, 186, 0.05);
-            margin-top: 10px;
-        }
-        .email-pp { font-size: 0.95rem; color: #fff; font-weight: bold; display: block; margin-bottom: 15px; }
-
-        .btn-paypal {
-            background: #0070ba;
-            color: white;
-            padding: 16px;
-            display: block;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            transition: 0.3s;
-        }
-
-        /* CUADRO ZELLE VISTOSO */
+        /* Estilo para Zelle */
+        .zelle-header { color: var(--zelle-color); font-size: 1.8rem; font-weight: 900; letter-spacing: 3px; font-style: italic; margin-bottom: 15px; display: block; }
         .zelle-box {
-            border: 1px solid #6d1ed4; /* Color oficial Zelle */
+            border: 1px solid var(--zelle-color);
             padding: 20px;
             border-radius: 12px;
             background: rgba(109, 30, 212, 0.05);
-            margin-top: 10px;
         }
-        .num-zelle { color: #fff; font-size: 1.3rem; font-weight: bold; display: block; margin-bottom: 5px; }
+        .num-zelle { color: #fff; font-size: 1.4rem; font-weight: bold; display: block; margin-bottom: 5px; }
 
-        .btn-whatsapp {
-            background: #25d366;
-            color: black;
-            padding: 16px;
-            display: block;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            margin-top: 15px;
+        /* Estilo para PayPal */
+        .paypal-header { color: var(--paypal-color); font-size: 1.8rem; font-weight: 900; letter-spacing: 1px; font-style: italic; margin-bottom: 15px; display: block; }
+        .paypal-box {
+            border: 1px solid var(--paypal-color);
+            padding: 20px;
+            border-radius: 12px;
+            background: rgba(0, 112, 186, 0.05);
         }
+        .email-pp { font-size: 0.95rem; color: #fff; font-weight: bold; display: block; margin-bottom: 15px; word-break: break-all; }
 
-        .volver {
-            display: inline-block;
-            margin-top: 40px;
-            color: #444;
-            text-decoration: none;
-            font-size: 0.7rem;
-            text-transform: uppercase;
-        }
+        /* Botones */
+        .btn-paypal { background: var(--paypal-color); color: white; padding: 16px; display: block; text-decoration: none; border-radius: 8px; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; }
+        .btn-whatsapp { background: #25d366; color: black; padding: 16px; display: block; text-decoration: none; border-radius: 8px; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; margin-top: 15px; }
+
+        .volver { display: inline-block; margin-top: 40px; color: #444; text-decoration: none; font-size: 0.7rem; text-transform: uppercase; }
     </style>
 </head>
 <body>
@@ -118,28 +81,32 @@
         
         <div class="monto"><span>$</span>39.99</div>
 
-        <!-- OPCIÓN ZELLE CON LOGO -->
+        <!-- OPCIÓN ZELLE -->
         <div class="metodo-pago">
-            <img src="https://wikimedia.org" alt="Zelle Logo" class="logo-pago" style="filter: brightness(0) invert(1);">
+            <span class="zelle-header">Zelle</span>
             <div class="zelle-box">
-                <span class="num-zelle">+1 (509) 845-4218</span>
-                <small style="color:#888; letter-spacing:1px;">TEAM-N-FIT</small>
+                <span class="num-zelle">509-845-4218</span>
+                <small style="color:#aaa; letter-spacing:1px; text-transform: uppercase;">A nombre de: <br><b style="color:white">Nairubi Padilla</b></small>
             </div>
-            <!-- Enlace directo de WhatsApp sin mensaje automático para evitar errores -->
+            <!-- Link de WhatsApp simplificado -->
             <a href="https://wa.me" class="btn-whatsapp">ENVIAR COMPROBANTE</a>
         </div>
 
-        <!-- OPCIÓN PAYPAL CON LOGO -->
+        <!-- OPCIÓN PAYPAL -->
         <div class="metodo-pago">
-            <img src="https://wikimedia.org" alt="PayPal Logo" class="logo-pago">
+            <span class="paypal-header">PayPal</span>
             <div class="paypal-box">
                 <span class="email-pp">padillaliranairubi@gmail.com</span>
                 <a href="https://paypal.com" target="_blank" class="btn-paypal">PAGAR AHORA</a>
             </div>
         </div>
 
-        <a href="index.html" class="volver">← Cancelar y volver al inicio</a>
+        <a href="index.html" class="volver">← Volver al inicio</a>
     </div>
+
+</body>
+</html>
+
 
 </body>
 </html>
