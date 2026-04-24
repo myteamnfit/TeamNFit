@@ -9,6 +9,7 @@
             --rosa: #ff00ff;
             --blanco: #ffffff;
             --negro: #000000;
+            --azul-paypal: #0070ba;
         }
 
         body {
@@ -25,101 +26,121 @@
             margin: 0 auto;
             border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 40px 20px;
-            border-radius: 15px;
+            border-radius: 20px;
             background: #050505;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
         }
 
-        h1 { font-size: 1.4rem; font-weight: 200; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 5px; }
-        .fecha { color: #888; font-size: 0.8rem; margin-bottom: 20px; letter-spacing: 1px; }
+        h1 { font-size: 1.4rem; font-weight: 200; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 5px; }
+        .fecha { color: #666; font-size: 0.8rem; margin-bottom: 20px; letter-spacing: 2px; }
         
         .monto { font-size: 4.5rem; font-weight: bold; margin: 20px 0; color: var(--blanco); }
         .monto span { font-size: 1.5rem; vertical-align: top; color: var(--rosa); margin-right: 5px; }
 
         .metodo-pago {
-            margin-top: 25px;
-            padding: 25px;
-            border-radius: 10px;
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 15px;
             background: #0a0a0a;
             border: 1px solid #1a1a1a;
         }
 
-        /* Botón PayPal corregido */
+        .etiqueta { font-size: 0.7rem; letter-spacing: 2px; opacity: 0.6; text-transform: uppercase; margin-bottom: 15px; }
+
+        /* SECCIÓN PAYPAL VISTOSA */
+        .paypal-card {
+            border: 1px solid var(--azul-paypal);
+            background: rgba(0, 112, 186, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .paypal-email {
+            display: block;
+            font-size: 1rem;
+            color: var(--blanco);
+            margin-bottom: 15px;
+            word-break: break-all;
+            font-weight: bold;
+        }
         .btn-paypal {
-            background: #0070ba;
+            background: var(--azul-paypal);
             color: white;
             padding: 18px;
             display: block;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 8px;
             font-weight: bold;
-            margin-bottom: 10px;
             text-transform: uppercase;
             font-size: 0.85rem;
+            transition: 0.3s;
         }
 
-        /* Sección Zelle */
-        .zelle-info {
-            border: 1px dashed var(--rosa);
+        /* SECCIÓN ZELLE VISTOSA */
+        .zelle-card {
+            border: 1px solid var(--rosa);
+            background: rgba(255, 0, 255, 0.05);
             padding: 20px;
-            border-radius: 5px;
-            margin-top: 10px;
-            line-height: 1.6;
+            border-radius: 10px;
+            margin-bottom: 15px;
         }
-        .zelle-info b { color: var(--rosa); font-size: 1.3rem; letter-spacing: 1px; }
+        .zelle-num { color: var(--rosa); font-size: 1.4rem; font-weight: bold; display: block; margin-bottom: 10px; }
 
-        /* Botón WhatsApp corregido */
         .btn-whatsapp {
             background: #25d366;
             color: black;
             padding: 15px;
             display: block;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 8px;
             font-weight: bold;
-            margin-top: 20px;
-            font-size: 0.85rem;
             text-transform: uppercase;
+            font-size: 0.85rem;
         }
 
         .volver {
             display: inline-block;
             margin-top: 40px;
-            color: #555;
+            color: #444;
             text-decoration: none;
             font-size: 0.7rem;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>RESERVA PREMIUM</h1>
+        <h1>Reserva Premium</h1>
         <div class="fecha">Sábado 20 de Junio</div>
         
         <div class="monto"><span>$</span>39.99</div>
 
-        <!-- OPCIÓN ZELLE -->
+        <!-- ZELLE -->
         <div class="metodo-pago">
-            <p style="font-size: 0.75rem; margin-bottom: 15px; letter-spacing: 1px; opacity: 0.7;">PAGAR POR ZELLE</p>
-            <div class="zelle-info">
-                Envía tu pago al número:<br>
-                <b>509-845-4218</b>
+            <div class="etiqueta">Opción 1: Zelle</div>
+            <div class="zelle-card">
+                <span class="zelle-num">+1 (509) 845-4218</span>
+                <small style="color:#888">A nombre de: Team-N-Fit</small>
             </div>
-            <!-- Enlace de WhatsApp corregido sin guiones -->
-            <a href="https://wa.me." class="btn-whatsapp">Enviar comprobante WhatsApp</a>
+            <a href="https://whatsapp.com." class="btn-whatsapp">Confirmar por WhatsApp</a>
         </div>
 
-        <!-- OPCIÓN PAYPAL -->
+        <!-- PAYPAL -->
         <div class="metodo-pago">
-            <p style="font-size: 0.75rem; margin-bottom: 15px; letter-spacing: 1px; opacity: 0.7;">O PAGA CON TARJETA / PAYPAL</p>
-            <p style="font-size: 0.8rem; margin-bottom: 10px;">Enviar a: <b>padillaliranairubi@gmail.com</b></p>
-            <!-- Enlace de PayPal corregido -->
-            <a href="https://paypal.com" target="_blank" class="btn-paypal">Pagar con PayPal</a>
+            <div class="etiqueta">Opción 2: PayPal</div>
+            <div class="paypal-card">
+                <span class="paypal-email">padillaliranairubi@gmail.com</span>
+                <a href="https://paypal.com" target="_blank" class="btn-paypal">Pagar con PayPal</a>
+            </div>
         </div>
 
-        <a href="index.html" class="volver">← Volver al inicio</a>
+        <a href="index.html" class="volver">← Cancelar y volver</a>
     </div>
+
+</body>
+</html>
 
 </body>
 </html>
