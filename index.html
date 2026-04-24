@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team-N-Fit | Zumba Kennewick</title>
+    <style>
+        :root {
+            --rosa: #ff00ff;
+            --blanco: #ffffff;
+            --negro: #000000;
+            --gris-oscuro: #0a0a0a;
+        }
+
+        body {
+            background-color: var(--negro);
+            color: var(--blanco);
+            font-family: 'Arial Black', sans-serif;
+            margin: 0;
+            scroll-behavior: smooth;
+        }
+
+        /* Navegación */
+        nav {
+            background: rgba(0, 0, 0, 0.95);
+            padding: 20px 5%;
+            position: fixed;
+            width: 90%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid var(--rosa);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo { color: var(--rosa); font-size: 1.8rem; text-shadow: 0 0 10px var(--rosa); }
+        nav a { color: var(--blanco); text-decoration: none; margin-left: 20px; font-size: 0.8rem; text-transform: uppercase; }
+
+        /* Portada */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://unsplash.com');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        h1 { font-size: 5rem; color: var(--rosa); text-shadow: 0 0 25px var(--rosa); margin: 0; }
+        .hero p { font-size: 1.5rem; letter-spacing: 5px; margin-top: 10px; }
+
+        /* Secciones */
+        section { padding: 80px 10%; text-align: center; }
+        h2 { font-size: 3rem; color: var(--rosa); text-shadow: 0 0 10px var(--rosa); margin-bottom: 50px; }
+
+        .container { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+
+        /* Tarjetas */
+        .card {
+            background: var(--gris-oscuro);
+            border: 2px solid var(--rosa);
+            border-radius: 15px;
+            padding: 40px;
+            width: 300px;
+            transition: 0.4s;
+        }
+
+        .card:hover { transform: scale(1.05); box-shadow: 0 0 40px var(--rosa); }
+        .price { font-size: 3.5rem; font-weight: bold; color: var(--rosa); margin: 20px 0; }
+
+        /* Botones */
+        .btn {
+            background: var(--rosa);
+            color: var(--negro);
+            padding: 18px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 20px;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .btn:hover { background: var(--blanco); transform: translateY(-3px); }
+
+        /* Mapa y Contacto */
+        #contacto { background: var(--gris-oscuro); border-top: 4px solid var(--rosa); }
+        .contact-info { font-size: 1.2rem; margin-bottom: 40px; }
+        .contact-info b { color: var(--rosa); }
+        
+        .map-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            border: 2px solid var(--rosa);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        footer { padding: 30px; color: #444; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">TEAM-N-FIT</div>
+        <div>
+            <a href="#verano">Verano</a>
+            <a href="#otono">Otoño</a>
+            <a href="#contacto">Ubicación</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>TEAM-N-FIT</h1>
+        <p>ZUMBA EN KENNEWICK</p>
+        <a href="#verano" class="btn">Ver Paquetes</a>
+    </div>
+
+    <!-- VERANO -->
+    <section id="verano">
+        <h2>PAQUETES VERANO ☀️</h2>
+        <div class="container">
+            <div class="card">
+                <h3>Verano Intenso</h3>
+                <div class="price">$65</div>
+                <p>Clases ilimitadas • Junio a Agosto</p>
+                <a href="https://wa.me" class="btn">Info WhatsApp 1</a>
+            </div>
+            <div class="card">
+                <h3>Punch Card</h3>
+                <div class="price">$40</div>
+                <p>12 clases para usar todo el verano</p>
+                <a href="https://wa.me" class="btn">Info WhatsApp 2</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- OTOÑO -->
+    <section id="otono">
+        <h2>PAQUETES OTOÑO 🍂</h2>
+        <div class="container">
+            <div class="card" style="border-color: white;">
+                <h3>Back to Rhythm</h3>
+                <div class="price">$50</div>
+                <p>Mensualidad Septiembre y Octubre</p>
+                <a href="https://wa.me" class="btn" style="background: white;">Me interesa</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO Y MAPA -->
+    <section id="contacto">
+        <h2>DÓNDE ESTAMOS</h2>
+        <div class="contact-info">
+            <p>📍 <b>Dirección:</b> 1020 S Olympia Pl, Kennewick, WA 99337</p>
+            <p>📞 <b>Teléfonos:</b> 509-845-4218 | 509-845-4230</p>
+            <p>📧 <b>Email:</b> MyTeamNfit@gmail.com</p>
+        </div>
+
+        <div class="map-container">
+            <iframe 
+                src="https://google.com" 
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <a href="https://wa.me" class="btn">¡Inscríbete Hoy!</a>
+    </section>
+
+    <footer>
+        &copy; 2024 TEAM-N-FIT | Kennewick, Washington.
+    </footer>
+
+</body>
+</html>
+
