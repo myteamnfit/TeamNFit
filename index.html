@@ -3,26 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team-N-Fit | Zumba & Fitness</title>
+    <title>Team-N-Fit | Paquete Premium</title>
     <style>
         :root {
             --rosa: #ff00ff;
             --blanco: #ffffff;
             --negro: #000000;
-            --gris-claro: #f4f4f4;
             --gris-oscuro: #0a0a0a;
         }
 
         body {
             background-color: var(--negro);
             color: var(--blanco);
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Fuente más estilizada */
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             margin: 0;
             scroll-behavior: smooth;
-            -webkit-font-smoothing: antialiased;
         }
 
-        /* Navegación Refinada */
+        /* Navegación */
         nav {
             background: rgba(0, 0, 0, 0.9);
             padding: 15px 5%;
@@ -36,9 +34,8 @@
             align-items: center;
         }
 
-        .logo { font-size: 1.3rem; font-weight: bold; letter-spacing: 2px; }
+        .logo { font-size: 1.2rem; font-weight: bold; letter-spacing: 2px; }
         .logo span { color: var(--rosa); }
-        nav a { color: var(--blanco); text-decoration: none; margin-left: 20px; font-size: 0.75rem; text-transform: uppercase; font-weight: 300; }
 
         /* Hero - Tu Imagen Principal */
         .hero-container {
@@ -56,132 +53,104 @@
             margin: 0 auto;
         }
 
-        /* Secciones con texto más pequeño */
-        section { padding: 60px 10%; text-align: center; }
-        h2 { font-size: 2rem; font-weight: 300; text-transform: uppercase; margin-bottom: 40px; letter-spacing: 3px; }
-        h2 span { border-bottom: 2px solid var(--rosa); padding-bottom: 5px; }
-        p { font-size: 0.95rem; color: var(--gris-claro); font-weight: 300; }
+        /* Sección Única de Paquete */
+        section { padding: 80px 10%; text-align: center; }
 
-        .container { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-
-        /* Tarjetas de Paquetes */
-        .card {
-            background: var(--gris-oscuro);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            padding: 30px;
-            width: 260px;
-            transition: 0.3s;
+        .premium-box {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 50px 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            background: radial-gradient(circle, #111 0%, #000 100%);
+            border-radius: 20px;
         }
 
-        .card:hover { border-color: var(--rosa); box-shadow: 0 5px 20px rgba(255, 0, 255, 0.2); }
-        .card h3 { font-size: 1.2rem; font-weight: 400; margin-bottom: 15px; }
-        
-        .price { 
-            font-size: 2.5rem; 
-            font-weight: 200; 
-            color: var(--blanco); 
-            margin: 15px 0;
+        h2 { font-size: 2.2rem; font-weight: 200; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 10px; }
+        .fecha { color: var(--rosa); font-size: 1.2rem; letter-spacing: 3px; margin-bottom: 30px; text-transform: uppercase; }
+
+        /* PRECIO GRANDE Y BLANCO */
+        .precio-premium {
+            font-size: 5.5rem; /* Tamaño grande */
+            font-weight: bold;
+            color: var(--blanco);
+            margin: 20px 0;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
         }
 
-        /* Botones de Pago */
-        .btn {
+        .precio-premium span { font-size: 1.5rem; vertical-align: top; margin-right: 5px; }
+        .per-person { font-size: 0.9rem; color: #888; text-transform: uppercase; letter-spacing: 2px; }
+
+        /* Botón de Pago */
+        .btn-pago {
             background: var(--rosa);
             color: var(--negro);
-            padding: 12px 25px;
+            padding: 20px 50px;
             text-decoration: none;
             font-weight: bold;
-            border-radius: 4px;
+            border-radius: 50px;
             display: inline-block;
-            margin-top: 15px;
-            font-size: 0.85rem;
-            transition: 0.3s;
+            margin-top: 40px;
+            font-size: 1rem;
+            transition: 0.4s;
             text-transform: uppercase;
         }
 
-        .btn:hover { background: var(--blanco); }
+        .btn-pago:hover { background: var(--blanco); box-shadow: 0 0 30px var(--blanco); }
 
-        /* Ubicación y Mapa */
-        #contacto { background: #050505; }
-        .contact-info { font-size: 0.9rem; margin-bottom: 30px; line-height: 1.8; }
-        .contact-info b { color: var(--rosa); font-weight: 400; }
-        
+        /* Contacto */
+        #ubicacion { background: #050505; border-top: 1px solid #111; }
         .map-container {
             width: 100%;
             max-width: 800px;
-            margin: 0 auto;
-            border-radius: 5px;
-            overflow: hidden;
+            margin: 30px auto;
             filter: grayscale(1) invert(0.9);
-            opacity: 0.7;
+            opacity: 0.6;
         }
 
-        footer { padding: 25px; color: #444; font-size: 0.7rem; border-top: 1px solid #111; }
+        footer { padding: 40px; color: #333; font-size: 0.7rem; }
     </style>
 </head>
 <body>
 
     <nav>
         <div class="logo">TEAM-N-<span>FIT</span></div>
-        <div>
-            <a href="#verano">Verano</a>
-            <a href="#otono">Otoño</a>
-            <a href="#contacto">Ubicación</a>
-        </div>
+        <a href="#ubicacion" style="color:white; text-decoration:none; font-size:0.7rem; text-transform:uppercase;">Ubicación</a>
     </nav>
 
     <div class="hero-container">
-        <img src="portada.jpg.png" alt="Team-N-Fit Portada">
+        <img src="portada.jpg.png" alt="Team-N-Fit Portada Oficial">
     </div>
 
-    <!-- SECCIÓN VERANO -->
-    <section id="verano">
-        <h2><span>TARIFAS VERANO</span> ☀️</h2>
-        <div class="container">
-            <div class="card">
-                <h3>PAQUETE INTENSO</h3>
-                <div class="price">$65</div>
-                <p>Ilimitado. Junio - Agosto.</p>
-                <a href="pago.html" class="btn">PAGAR AHORA</a>
-            </div>
-            <div class="card">
-                <h3>PUNCH CARD</h3>
-                <div class="price">$40</div>
-                <p>Bono de 12 sesiones.</p>
-                <a href="pago.html" class="btn">PAGAR AHORA</a>
-            </div>
+    <!-- PAQUETE ÚNICO PREMIUM -->
+    <section>
+        <div class="premium-box">
+            <h2>PAQUETE PREMIUM</h2>
+            <div class="fecha">Sábado 20 de Junio</div>
+            
+            <p style="font-weight: 200; opacity: 0.8;">Únete a la experiencia exclusiva de Zumba y Fitness</p>
+            
+            <div class="precio-premium"><span>$</span>39,99</div>
+            <div class="per-person">Por persona</div>
+
+            <a href="pago.html" class="btn-pago">RESERVAR MI LUGAR</a>
         </div>
     </section>
 
-    <!-- SECCIÓN OTOÑO -->
-    <section id="otono">
-        <h2><span>TARIFAS OTOÑO</span> 🍂</h2>
-        <div class="container">
-            <div class="card">
-                <h3>AUTUMN GLOW</h3>
-                <div class="price">$50</div>
-                <p>Mensualidad Septiembre y Octubre.</p>
-                <a href="pago.html" class="btn">PAGAR AHORA</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACTO -->
-    <section id="contacto">
-        <h2><span>UBICACIÓN</span></h2>
-        <div class="contact-info">
-            <p>📍 1020 S Olympia Pl, Kennewick, WA 99337</p>
-            <p>📞 <b>WhatsApp:</b> 509-845-4218 / 509-845-4230</p>
-            <p>📧 <b>Email:</b> MyTeamNfit@gmail.com</p>
-        </div>
+    <!-- CONTACTO Y MAPA -->
+    <section id="ubicacion">
+        <p style="font-size: 0.9rem; color: #888; margin-bottom: 20px;">
+            📍 1020 S Olympia Pl, Kennewick, WA 99337<br>
+            📞 509-845-4218 / 509-845-4230<br>
+            📧 MyTeamNfit@gmail.com
+        </p>
 
         <div class="map-container">
-            <iframe src="https://google.com" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://google.com" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
 
     <footer>
-        &copy; 2024 TEAM-N-FIT | Kennewick, WA.
+        &copy; 2024 TEAM-N-FIT | Kennewick, Washington.
     </footer>
 
 </body>
