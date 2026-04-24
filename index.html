@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team-N-Fit | Zumba & Fitness</title>
+    <title>Team-N-Fit | Zumba & Fitness Kennewick</title>
     <style>
         :root {
             --rosa: #ff00ff;
@@ -35,10 +35,10 @@
         }
 
         .logo { color: var(--blanco); font-size: 1.5rem; text-shadow: 0 0 10px var(--rosa); }
-        nav div a { color: var(--blanco); text-decoration: none; margin-left: 20px; font-size: 0.8rem; text-transform: uppercase; }
+        nav a { color: var(--blanco); text-decoration: none; margin-left: 20px; font-size: 0.8rem; text-transform: uppercase; }
 
         /* SECCIÓN DE TU IMAGEN PRINCIPAL */
-        .hero-section {
+        .hero-container {
             margin-top: 80px; /* Espacio para el menú */
             width: 100%;
             background-color: var(--negro);
@@ -47,14 +47,16 @@
             border-bottom: 5px solid var(--rosa);
         }
 
-        .hero-section img {
+        .hero-container img {
             width: 100%;
-            max-width: 1200px; /* Para que se vea perfecta */
+            max-width: 1200px;
             height: auto;
-            box-shadow: 0 0 30px rgba(255, 0, 255, 0.4);
+            display: block;
+            margin: 0 auto;
+            box-shadow: 0 0 30px rgba(255, 0, 255, 0.5);
         }
 
-        /* Secciones */
+        /* Secciones Generales */
         section { padding: 80px 10%; text-align: center; }
         h2 { font-size: 3rem; color: var(--blanco); text-transform: uppercase; margin-bottom: 50px; }
         h2 span { color: var(--rosa); border-bottom: 3px solid var(--blanco); }
@@ -119,12 +121,12 @@
         </div>
     </nav>
 
-    <!-- AQUÍ SE CARGA TU IMAGEN PORTADA.JPG -->
-    <div class="hero-section">
-        <img src="portada.jpg" alt="Team-N-Fit Zumba">
+    <!-- AQUÍ SE CARGA TU IMAGEN PORTADA.JPG.PNG -->
+    <div class="hero-container">
+        <img src="portada.jpg.png" alt="Team-N-Fit Zumba Oficial">
     </div>
 
-    <!-- PAQUETES VERANO -->
+    <!-- SECCIÓN VERANO -->
     <section id="verano">
         <h2><span>PAQUETES VERANO</span> ☀️</h2>
         <div class="container">
@@ -135,15 +137,15 @@
                 <a href="https://wa.me" class="btn">Info WhatsApp 1</a>
             </div>
             <div class="card">
-                <h3>Pack 12</h3>
+                <h3>Punch Card</h3>
                 <div class="price">$40</div>
-                <p>Flexibilidad total en verano</p>
+                <p>12 clases para usar todo el verano</p>
                 <a href="https://wa.me" class="btn">Info WhatsApp 2</a>
             </div>
         </div>
     </section>
 
-    <!-- PAQUETES OTOÑO -->
+    <!-- SECCIÓN OTOÑO -->
     <section id="otono">
         <h2><span>PAQUETES OTOÑO</span> 🍂</h2>
         <div class="container">
@@ -158,7 +160,7 @@
 
     <!-- CONTACTO Y MAPA -->
     <section id="contacto">
-        <h2><span>UBICACIÓN</span></h2>
+        <h2><span>NUESTRA UBICACIÓN</span></h2>
         <div class="contact-info">
             <p>📍 <b>Dirección:</b> 1020 S Olympia Pl, Kennewick, WA 99337</p>
             <p>📞 <b>Teléfonos:</b> 509-845-4218 | 509-845-4230</p>
