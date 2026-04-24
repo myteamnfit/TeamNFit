@@ -3,39 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finalizar Reserva | Team-N-Fit</title>
+    <title>Finalizar Pago | Team-N-Fit</title>
     <style>
-        body { background-color: #000; color: #fff; font-family: sans-serif; text-align: center; padding: 50px 20px; }
-        .pago-box { max-width: 500px; margin: 0 auto; border: 1px solid #ff00ff; padding: 30px; border-radius: 15px; background: #0a0a0a; }
-        h1 { color: #ff00ff; font-size: 1.8rem; text-transform: uppercase; }
-        .monto { font-size: 3rem; margin: 20px 0; font-weight: bold; }
-        .opciones { margin-top: 40px; }
-        .btn-paypal { background: #0070ba; color: #fff; padding: 15px; display: block; text-decoration: none; border-radius: 50px; font-weight: bold; margin-bottom: 15px; }
-        .zelle-box { border: 1px solid #fff; padding: 15px; border-radius: 10px; margin-top: 20px; }
-        .zelle-box b { color: #ff00ff; }
-        .btn-volver { color: #555; text-decoration: none; font-size: 0.8rem; margin-top: 30px; display: inline-block; }
+        :root {
+            --rosa: #ff00ff;
+            --blanco: #ffffff;
+            --negro: #000000;
+        }
+
+        body {
+            background-color: var(--negro);
+            color: var(--blanco);
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            text-align: center;
+            padding: 40px 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 450px;
+            margin: 0 auto;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px 20px;
+            border-radius: 15px;
+            background: #050505;
+        }
+
+        h1 { font-size: 1.4rem; font-weight: 200; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 5px; }
+        .fecha { color: #888; font-size: 0.8rem; margin-bottom: 20px; letter-spacing: 1px; }
+        
+        .monto { font-size: 4.5rem; font-weight: bold; margin: 20px 0; color: var(--blanco); }
+        .monto span { font-size: 1.5rem; vertical-align: top; color: var(--rosa); margin-right: 5px; }
+
+        .metodo-pago {
+            margin-top: 25px;
+            padding: 25px;
+            border-radius: 10px;
+            background: #0a0a0a;
+            border: 1px solid #1a1a1a;
+        }
+
+        /* Botón PayPal */
+        .btn-paypal {
+            background: #0070ba;
+            color: white;
+            padding: 18px;
+            display: block;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+
+        /* Sección Zelle */
+        .zelle-info {
+            border: 1px dashed var(--rosa);
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 10px;
+            line-height: 1.6;
+        }
+        .zelle-info b { color: var(--rosa); font-size: 1.3rem; letter-spacing: 1px; }
+
+        .btn-whatsapp {
+            background: #25d366;
+            color: black;
+            padding: 15px;
+            display: block;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+        }
+
+        .volver {
+            display: inline-block;
+            margin-top: 40px;
+            color: #555;
+            text-decoration: none;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+        }
     </style>
 </head>
 <body>
 
-    <div class="pago-box">
-        <h1>Reserva Paquete Premium</h1>
-        <p>Sábado 20 de Junio</p>
-        <div class="monto">$39,99</div>
+    <div class="container">
+        <h1>RESERVA PREMIUM</h1>
+        <div class="fecha">Sábado 20 de Junio</div>
+        
+        <div class="monto"><span>$</span>39.99</div>
 
-        <div class="opciones">
-            <!-- OPCIÓN PAYPAL (Debes crear tu botón en PayPal y pegar aquí el código) -->
-            <p>Pagar con Tarjeta o PayPal:</p>
-            <a href="https://paypal.com" target="_blank" class="btn-paypal">PAGAR CON PAYPAL</a>
-
-            <div class="zelle-box">
-                <p>Pagar por <b>Zelle</b>:</p>
-                <p>Envía tu pago a: <b>MyTeamNfit@gmail.com</b></p>
-                <p style="font-size: 0.8rem;">*Envía comprobante por WhatsApp*</p>
+        <!-- OPCIÓN ZELLE -->
+        <div class="metodo-pago">
+            <p style="font-size: 0.75rem; margin-bottom: 15px; letter-spacing: 1px; opacity: 0.7;">PAGAR POR ZELLE</p>
+            <div class="zelle-info">
+                Envía tu pago al número:<br>
+                <b>509-845-4218</b>
             </div>
+            <!-- Botón para enviar comprobante -->
+            <a href="https://wa.me." class="btn-whatsapp">Enviar comprobante por WhatsApp</a>
         </div>
 
-        <a href="index.html" class="btn-volver">← Volver a la página principal</a>
+        <!-- OPCIÓN PAYPAL -->
+        <div class="metodo-pago">
+            <p style="font-size: 0.75rem; margin-bottom: 15px; letter-spacing: 1px; opacity: 0.7;">O PAGA CON TARJETA / PAYPAL</p>
+            <a href="https://paypal.com" target="_blank" class="btn-paypal">Pagar con PayPal</a>
+        </div>
+
+        <a href="index.html" class="volver">← Volver al inicio</a>
     </div>
 
 </body>
