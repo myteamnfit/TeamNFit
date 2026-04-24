@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team-N-Fit | Paquete Premium</title>
+    <title>Team-N-Fit | Zumba Premium</title>
     <style>
         :root {
             --rosa: #ff00ff;
@@ -20,9 +20,9 @@
             scroll-behavior: smooth;
         }
 
-        /* Navegación */
+        /* Navegación elegante */
         nav {
-            background: rgba(0, 0, 0, 0.9);
+            background: rgba(0, 0, 0, 0.95);
             padding: 15px 5%;
             position: fixed;
             width: 90%;
@@ -36,8 +36,9 @@
 
         .logo { font-size: 1.2rem; font-weight: bold; letter-spacing: 2px; }
         .logo span { color: var(--rosa); }
+        nav a { color: var(--blanco); text-decoration: none; font-size: 0.75rem; text-transform: uppercase; font-weight: 300; }
 
-        /* Hero - Tu Imagen Principal */
+        /* Portada - Tu imagen */
         .hero-container {
             margin-top: 60px;
             width: 100%;
@@ -53,56 +54,59 @@
             margin: 0 auto;
         }
 
-        /* Sección Única de Paquete */
+        /* Sección del Paquete Premium */
         section { padding: 80px 10%; text-align: center; }
 
         .premium-box {
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 50px 20px;
             max-width: 600px;
             margin: 0 auto;
-            background: radial-gradient(circle, #111 0%, #000 100%);
-            border-radius: 20px;
+            background: #050505;
+            border-radius: 10px;
         }
 
-        h2 { font-size: 2.2rem; font-weight: 200; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 10px; }
-        .fecha { color: var(--rosa); font-size: 1.2rem; letter-spacing: 3px; margin-bottom: 30px; text-transform: uppercase; }
+        h2 { font-size: 2rem; font-weight: 200; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 10px; }
+        .fecha { color: var(--rosa); font-size: 1.1rem; letter-spacing: 3px; margin-bottom: 30px; text-transform: uppercase; }
 
-        /* PRECIO GRANDE Y BLANCO */
-        .precio-premium {
-            font-size: 5.5rem; /* Tamaño grande */
+        /* Precio Grande y Blanco */
+        .precio-grande {
+            font-size: 5.5rem;
             font-weight: bold;
             color: var(--blanco);
             margin: 20px 0;
-            text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
         }
+        .precio-grande span { font-size: 1.5rem; vertical-align: top; color: var(--rosa); }
 
-        .precio-premium span { font-size: 1.5rem; vertical-align: top; margin-right: 5px; }
-        .per-person { font-size: 0.9rem; color: #888; text-transform: uppercase; letter-spacing: 2px; }
-
-        /* Botón de Pago */
+        /* Botón que conecta con tu archivo pago.html */
         .btn-pago {
             background: var(--rosa);
             color: var(--negro);
-            padding: 20px 50px;
+            padding: 18px 45px;
             text-decoration: none;
             font-weight: bold;
-            border-radius: 50px;
+            border-radius: 4px;
             display: inline-block;
-            margin-top: 40px;
-            font-size: 1rem;
-            transition: 0.4s;
+            margin-top: 30px;
+            font-size: 0.9rem;
+            transition: 0.3s;
             text-transform: uppercase;
         }
 
-        .btn-pago:hover { background: var(--blanco); box-shadow: 0 0 30px var(--blanco); }
+        .btn-pago:hover { background: var(--blanco); box-shadow: 0 0 20px var(--blanco); }
 
-        /* Contacto */
-        #ubicacion { background: #050505; border-top: 1px solid #111; }
+        /* Ubicación y Mapa */
+        #ubicacion { background: var(--gris-oscuro); border-top: 1px solid #111; }
+        .info-contacto { font-size: 0.9rem; margin-bottom: 30px; line-height: 2; color: #ccc; }
+        .info-contacto b { color: var(--rosa); font-weight: 400; }
+        
         .map-container {
             width: 100%;
             max-width: 800px;
-            margin: 30px auto;
+            margin: 0 auto;
+            border-radius: 5px;
+            overflow: hidden;
             filter: grayscale(1) invert(0.9);
             opacity: 0.6;
         }
@@ -114,38 +118,38 @@
 
     <nav>
         <div class="logo">TEAM-N-<span>FIT</span></div>
-        <a href="#ubicacion" style="color:white; text-decoration:none; font-size:0.7rem; text-transform:uppercase;">Ubicación</a>
+        <a href="#ubicacion">UBICACIÓN</a>
     </nav>
 
+    <!-- Tu imagen principal -->
     <div class="hero-container">
-        <img src="portada.jpg.png" alt="Team-N-Fit Portada Oficial">
+        <img src="portada.jpg.png" alt="Team-N-Fit Zumba Oficial">
     </div>
 
-    <!-- PAQUETE ÚNICO PREMIUM -->
+    <!-- PAQUETE PREMIUM -->
     <section>
         <div class="premium-box">
             <h2>PAQUETE PREMIUM</h2>
             <div class="fecha">Sábado 20 de Junio</div>
             
-            <p style="font-weight: 200; opacity: 0.8;">Únete a la experiencia exclusiva de Zumba y Fitness</p>
-            
-            <div class="precio-premium"><span>$</span>39,99</div>
-            <div class="per-person">Por persona</div>
+            <div class="precio-grande"><span>$</span>39.99</div>
+            <p style="font-weight: 200; font-size: 0.85rem; color: #888; letter-spacing: 1px;">PAGO ÚNICO / ACCESO TOTAL</p>
 
+            <!-- ESTE BOTÓN YA ESTÁ CONECTADO A TU ARCHIVO PAGO.HTML -->
             <a href="pago.html" class="btn-pago">RESERVAR MI LUGAR</a>
         </div>
     </section>
 
     <!-- CONTACTO Y MAPA -->
     <section id="ubicacion">
-        <p style="font-size: 0.9rem; color: #888; margin-bottom: 20px;">
-            📍 1020 S Olympia Pl, Kennewick, WA 99337<br>
-            📞 509-845-4218 / 509-845-4230<br>
-            📧 MyTeamNfit@gmail.com
-        </p>
+        <div class="info-contacto">
+            <p>📍 1020 S Olympia Pl, Kennewick, WA 99337</p>
+            <p>📞 <b>WhatsApp:</b> 509-845-4218 / 509-845-4230</p>
+            <p>📧 <b>Email:</b> MyTeamNfit@gmail.com</p>
+        </div>
 
         <div class="map-container">
-            <iframe src="https://google.com" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://google.com" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
 
